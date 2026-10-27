@@ -1,0 +1,43 @@
+{
+  "project": "hcm_student_rental_pricing",
+  "best_model": "LightGBM Regressor",
+  "train_size": 4455,
+  "val_size": 955,
+  "test_size": 955,
+  "num_features": [
+    "area_m2",
+    "dist_to_center_km",
+    "dist_to_sgu_km",
+    "dist_nearest_uni_km",
+    "n_uni_within_2km",
+    "dist_nearest_hospital_km",
+    "n_hospitals_within_2km",
+    "dist_nearest_metro_km",
+    "amenity_score",
+    "text_word_count",
+    "has_ac",
+    "has_mezzanine",
+    "has_private_wc",
+    "has_kitchen",
+    "has_balcony_window",
+    "has_fridge",
+    "has_washer",
+    "has_elevator",
+    "is_fully_furnished",
+    "no_curfew",
+    "not_shared_owner",
+    "has_security",
+    "has_parking_basement",
+    "is_all_inclusive",
+    "female_only",
+    "is_shared_dorm"
+  ],
+  "cat_features": [
+    "ward_new",
+    "zone_group",
+    "room_type"
+  ],
+  "test_mae_vnd": 672783.0,
+  "test_r2": 0.7273,
+  "test_mape": 16.9
+}

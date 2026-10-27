@@ -1,0 +1,274 @@
+# POI Database: Universities and Major Hospitals in Ho Chi Minh City
+
+universities:
+  - name: "Đại học Sài Gòn (SGU) - Cơ sở chính (273 An Dương Vương, Q.5)"
+    short_name: "SGU_Main"
+    lat: 10.7599
+    lon: 106.6822
+    address: "273 An Dương Vương, Phường Chợ Quán (Phường 3 cũ), Quận 5, TP.HCM"
+  - name: "Đại học Sài Gòn (SGU) - Cơ sở 2"
+    short_name: "SGU_CS2"
+    lat: 10.7420
+    lon: 106.6850
+    address: "105 Bà Huyện Thanh Quan, Phường Xuân Hòa, TP.HCM"
+  - name: "Đại học Sư phạm TP.HCM"
+    short_name: "HCMUE"
+    lat: 10.7607
+    lon: 106.6830
+    address: "280 An Dương Vương, Phường Chợ Quán, TP.HCM"
+  - name: "Đại học Khoa học Tự nhiên (ĐHQG-HCM) - Quận 5"
+    short_name: "HCMUS_Q5"
+    lat: 10.7631
+    lon: 106.6823
+    address: "227 Nguyễn Văn Cừ, Phường Chợ Quán, TP.HCM"
+  - name: "Đại học Bách Khoa (ĐHQG-HCM) - Cơ sở 1"
+    short_name: "HCMUT_Q10"
+    lat: 10.7733
+    lon: 106.6597
+    address: "268 Lý Thường Kiệt, Phường Diên Hồng, TP.HCM"
+  - name: "Đại học Kinh tế TP.HCM (UEH) - Cơ sở A"
+    short_name: "UEH_CsA"
+    lat: 10.7828
+    lon: 106.6958
+    address: "59C Nguyễn Đình Chiểu, Phường Xuân Hòa, TP.HCM"
+  - name: "Đại học Kinh tế TP.HCM (UEH) - Cơ sở B"
+    short_name: "UEH_CsB"
+    lat: 10.7602
+    lon: 106.6685
+    address: "279 Nguyễn Tri Phương, Phường Diên Hồng, TP.HCM"
+  - name: "Đại học Y Dược TP.HCM"
+    short_name: "UMP"
+    lat: 10.7554
+    lon: 106.6599
+    address: "217 Hồng Bàng, Phường Chợ Lớn, TP.HCM"
+  - name: "Đại học Y khoa Phạm Ngọc Thạch"
+    short_name: "PNTU"
+    lat: 10.7736
+    lon: 106.6660
+    address: "2 Dương Quang Trung, Phường Diên Hồng, TP.HCM"
+  - name: "Đại học KHXH&NV (ĐHQG-HCM) - Cơ sở 1"
+    short_name: "USSH_Q1"
+    lat: 10.7870
+    lon: 106.7015
+    address: "10-12 Đinh Tiên Hoàng, Phường Bến Nghé/Sài Gòn, TP.HCM"
+  - name: "Đại học Luật TP.HCM - Cơ sở 1"
+    short_name: "ULAW_Q4"
+    lat: 10.7656
+    lon: 106.7061
+    address: "02 Nguyễn Tất Thành, Phường Vĩnh Hội, TP.HCM"
+  - name: "Đại học Tôn Đức Thắng - Tân Phong"
+    short_name: "TDTU"
+    lat: 10.7327
+    lon: 106.6993
+    address: "19 Nguyễn Hữu Thọ, Phường Tân Hưng, TP.HCM"
+  - name: "Đại học RMIT Việt Nam - Nam Sài Gòn"
+    short_name: "RMIT"
+    lat: 10.7297
+    lon: 106.6950
+    address: "702 Nguyễn Văn Linh, Phường Tân Hưng, TP.HCM"
+  - name: "Đại học Công nghiệp TP.HCM"
+    short_name: "IUH"
+    lat: 10.8222
+    lon: 106.6875
+    address: "12 Nguyễn Văn Bảo, Phường Hạnh Thông, TP.HCM"
+  - name: "Đại học HUTECH - Trụ sở Điện Biên Phủ"
+    short_name: "HUTECH"
+    lat: 10.8018
+    lon: 106.7145
+    address: "475A Điện Biên Phủ, Phường Gia Định/Thạnh Mỹ Tây, TP.HCM"
+  - name: "Đại học Ngoại thương (FTU) - Cơ sở 2"
+    short_name: "FTU2"
+    lat: 10.8058
+    lon: 106.7161
+    address: "15 Đường D5, Phường Thạnh Mỹ Tây, TP.HCM"
+  - name: "Đại học Giao thông Vận tải TP.HCM"
+    short_name: "UTH"
+    lat: 10.8038
+    lon: 106.7144
+    address: "Số 2 Đường Võ Oanh, Phường Thạnh Mỹ Tây, TP.HCM"
+  - name: "Đại học Văn Lang - Cơ sở chính (CS3)"
+    short_name: "VLU_CS3"
+    lat: 10.8288
+    lon: 106.6985
+    address: "69/68 Đặng Thùy Trâm, Phường Bình Lợi Trung, TP.HCM"
+  - name: "Đại học Sư phạm Kỹ thuật TP.HCM"
+    short_name: "HCMUTE"
+    lat: 10.8512
+    lon: 106.7720
+    address: "1 Võ Văn Ngân, Phường Thủ Đức, TP.HCM"
+  - name: "Đại học Nông Lâm TP.HCM"
+    short_name: "NLU"
+    lat: 10.8711
+    lon: 106.7931
+    address: "Khu phố 6, Phường Linh Xuân, TP.HCM"
+  - name: "Khu Đô thị ĐHQG-HCM (Làng Đại học)"
+    short_name: "VNU_Dorm"
+    lat: 10.8744
+    lon: 106.8028
+    address: "Khu phố 6, Phường Linh Xuân, TP.HCM"
+  - name: "Đại học Ngân hàng TP.HCM"
+    short_name: "HUB"
+    lat: 10.8569
+    lon: 106.7635
+    address: "36 Tôn Thất Đạm, Phường Sài Gòn / 56 Hoàng Diệu 2, Phường Thủ Đức"
+  - name: "Đại học Mở TP.HCM"
+    short_name: "OU"
+    lat: 10.7766
+    lon: 106.6923
+    address: "97 Võ Văn Tần, Phường Xuân Hòa, TP.HCM"
+  - name: "Đại học Công Thương TP.HCM (HUIT)"
+    short_name: "HUIT"
+    lat: 10.8068
+    lon: 106.6288
+    address: "140 Lê Trọng Tấn, Phường Tây Thạnh, TP.HCM"
+  - name: "Đại học Tài chính - Marketing (UFM)"
+    short_name: "UFM"
+    lat: 10.7487
+    lon: 106.7077
+    address: "778 Nguyễn Kiệm, Phú Nhuận / Phường Tân Mỹ, Q7"
+
+hospitals:
+  - name: "Bệnh viện Chợ Rẫy"
+    short_name: "BV_ChoRay"
+    lat: 10.7578
+    lon: 106.6593
+    address: "201B Nguyễn Chí Thanh, Phường Chợ Lớn, TP.HCM"
+  - name: "Bệnh viện Đại học Y Dược TP.HCM"
+    short_name: "BV_DHYD"
+    lat: 10.7550
+    lon: 106.6620
+    address: "215 Hồng Bàng, Phường Chợ Lớn, TP.HCM"
+  - name: "Bệnh viện Nhân dân 115"
+    short_name: "BV_115"
+    lat: 10.7745
+    lon: 106.6635
+    address: "527 Sư Vạn Hạnh, Phường Diên Hồng, TP.HCM"
+  - name: "Bệnh viện Thống Nhất"
+    short_name: "BV_ThongNhat"
+    lat: 10.7936
+    lon: 106.6534
+    address: "1 Lý Thường Kiệt, Phường Bảy Hiền, TP.HCM"
+  - name: "Bệnh viện Nhân dân Gia Định"
+    short_name: "BV_GiaDinh"
+    lat: 10.8038
+    lon: 106.6958
+    address: "1 Nơ Trang Long, Phường Gia Định, TP.HCM"
+  - name: "Bệnh viện Ung Bướu TP.HCM - Cơ sở 1"
+    short_name: "BV_UngBuou_CS1"
+    lat: 10.8049
+    lon: 106.6966
+    address: "3 Nơ Trang Long, Phường Gia Định, TP.HCM"
+  - name: "Bệnh viện Từ Dũ"
+    short_name: "BV_TuDu"
+    lat: 10.7686
+    lon: 106.6859
+    address: "284 Cống Quỳnh, Phường Cầu Ông Lãnh, TP.HCM"
+  - name: "Bệnh viện Hùng Vương"
+    short_name: "BV_HungVuong"
+    lat: 10.7559
+    lon: 106.6582
+    address: "128 Hồng Bàng, Phường Chợ Lớn, TP.HCM"
+  - name: "Bệnh viện Nhi Đồng 1"
+    short_name: "BV_NhiDong1"
+    lat: 10.7680
+    lon: 106.6698
+    address: "341 Sư Vạn Hạnh, Phường Diên Hồng, TP.HCM"
+  - name: "Bệnh viện Nhi Đồng 2"
+    short_name: "BV_NhiDong2"
+    lat: 10.7811
+    lon: 106.7022
+    address: "14 Lý Tự Trọng, Phường Sài Gòn, TP.HCM"
+  - name: "Bệnh viện Nguyễn Tri Phương"
+    short_name: "BV_NguyenTriPhuong"
+    lat: 10.7548
+    lon: 106.6688
+    address: "468 Nguyễn Trãi, Phường An Đông, TP.HCM"
+  - name: "Bệnh viện Bệnh Nhiệt Đới"
+    short_name: "BV_NhietDoi"
+    lat: 10.7538
+    lon: 106.6795
+    address: "764 Võ Văn Kiệt, Phường Chợ Quán, TP.HCM"
+  - name: "Bệnh viện Tai Mũi Họng TP.HCM"
+    short_name: "BV_TaiMuiHong"
+    lat: 10.7816
+    lon: 106.6851
+    address: "155B Trần Quốc Thảo, Phường Xuân Hòa, TP.HCM"
+  - name: "Bệnh viện Mắt TP.HCM"
+    short_name: "BV_Mat"
+    lat: 10.7761
+    lon: 106.6885
+    address: "280 Điện Biên Phủ, Phường Xuân Hòa, TP.HCM"
+  - name: "Bệnh viện Quân y 175"
+    short_name: "BV_175"
+    lat: 10.8175
+    lon: 106.6811
+    address: "786 Nguyễn Kiệm, Phường Hạnh Thông, TP.HCM"
+  - name: "Bệnh viện Đa khoa Sài Gòn"
+    short_name: "BV_SaiGon"
+    lat: 10.7721
+    lon: 106.6987
+    address: "125 Lê Lợi, Phường Bến Thành, TP.HCM"
+  - name: "Bệnh viện Quận Bình Thạnh"
+    short_name: "BV_Q_BinhThanh"
+    lat: 10.8005
+    lon: 106.6980
+    address: "112 Đinh Tiên Hoàng, Phường Gia Định, TP.HCM"
+  - name: "Bệnh viện Đa khoa Khu vực Thủ Đức"
+    short_name: "BV_KV_ThuDuc"
+    lat: 10.8588
+    lon: 106.7777
+    address: "64 Lê Văn Chí, Phường Linh Trung / Thủ Đức, TP.HCM"
+  - name: "Bệnh viện Đa khoa Quốc tế Vinmec Central Park"
+    short_name: "BV_Vinmec"
+    lat: 10.7933
+    lon: 106.7219
+    address: "208 Nguyễn Hữu Cảnh, Phường Thạnh Mỹ Tây, TP.HCM"
+  - name: "Bệnh viện FV (Pháp Việt)"
+    short_name: "BV_FV"
+    lat: 10.7303
+    lon: 106.7197
+    address: "6 Nguyễn Lương Bằng, Phường Tân Phú, Q7"
+
+metro_stations:
+  - name: "Ga Bến Thành"
+    lat: 10.7725
+    lon: 106.6980
+  - name: "Ga Nhà hát Thành phố"
+    lat: 10.7766
+    lon: 106.7032
+  - name: "Ga Ba Son"
+    lat: 10.7828
+    lon: 106.7078
+  - name: "Ga Công viên Văn Thánh"
+    lat: 10.7960
+    lon: 106.7168
+  - name: "Ga Tân Cảng"
+    lat: 10.7989
+    lon: 106.7230
+  - name: "Ga Thảo Điền"
+    lat: 10.8030
+    lon: 106.7352
+  - name: "Ga An Phú"
+    lat: 10.8055
+    lon: 106.7455
+  - name: "Ga Rạch Chiếc"
+    lat: 10.8122
+    lon: 106.7600
+  - name: "Ga Phước Long"
+    lat: 10.8228
+    lon: 106.7688
+  - name: "Ga Bình Thái"
+    lat: 10.8340
+    lon: 106.7765
+  - name: "Ga Thủ Đức"
+    lat: 10.8465
+    lon: 106.7842
+  - name: "Ga Khu Công nghệ cao"
+    lat: 10.8575
+    lon: 106.7960
+  - name: "Ga Đại học Quốc gia"
+    lat: 10.8710
+    lon: 106.8040
+  - name: "Ga Bến xe Miền Đông mới"
+    lat: 10.8805
+    lon: 106.8125

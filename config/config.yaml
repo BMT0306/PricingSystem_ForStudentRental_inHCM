@@ -1,0 +1,56 @@
+# Configuration for HCMC Student Room Rental ML Pipeline
+project:
+  name: "hcm_student_rental_pricing"
+  seed: 42
+
+crawler:
+  base_url: "https://phongtro123.com"
+  target_raw_count: 12000
+  year_constraint: 2026
+  early_stop_consecutive_old: 30
+  delay_range: [0.8, 1.5]
+  checkpoint_interval: 50
+  raw_data_path: "data/raw/phongtro123_raw.csv"
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0"
+
+domain_constraints:
+  min_area_m2: 8.0
+  max_area_m2: 60.0
+  min_price_vnd: 500000
+  max_price_vnd: 10000000
+  iqr_factor: 1.5
+
+geospatial:
+  ben_thanh:
+    lat: 10.7725
+    lon: 106.6980
+  sgu_main_campus:
+    lat: 10.7599
+    lon: 106.6822
+  hcm_bbox:
+    min_lat: 10.35
+    max_lat: 11.15
+    min_lon: 106.35
+    max_lon: 107.05
+  cache_db: "data/reference/nominatim_cache.sqlite"
+  ward_mapping_csv: "data/reference/ward_mapping_hcm.csv"
+  poi_database_yaml: "config/poi_database.yaml"
+
+splits:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  stratify_col: "old_district"
+
+data_paths:
+  raw: "data/raw/phongtro123_raw.csv"
+  cleaned: "data/processed/cleaned_full.csv"
+  train: "data/processed/train.csv"
+  val: "data/processed/val.csv"
+  test: "data/processed/test.csv"
+  reports_dir: "reports/figures"
+  models_dir: "models/v1"

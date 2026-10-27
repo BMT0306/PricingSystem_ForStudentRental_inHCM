@@ -1,0 +1,30 @@
+# Python environment & cache
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Logs & temp test files
+*.log
+crawler.log
+test_map.html
+catboost_info/
+
+# Testing & Type checks
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# IDE & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
