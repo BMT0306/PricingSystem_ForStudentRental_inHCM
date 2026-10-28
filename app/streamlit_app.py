@@ -16,54 +16,43 @@ from streamlit_folium import st_folium
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="Thẩm Định Giá & Tìm Trọ Sinh Viên TP.HCM",
+    page_title="HỖ TRỢ SINH VIÊN TÌM TRỌ",
     page_icon="🏠",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom Refined & Natural UI Styling
+# Custom Soothing & Smooth Dark UI Styling
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
     
     html, body, [class*="css"] {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
     
-    /* Clean, Refined Header */
+    /* Smooth, Refined Dark Header */
     .header-card {
-        background: #111827;
-        border: 1px solid #1f2937;
-        border-radius: 14px;
+        background: linear-gradient(180deg, #151d2d 0%, #111724 100%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
         padding: 24px 28px;
         margin-bottom: 24px;
-    }
-    .header-badge {
-        display: inline-block;
-        font-size: 0.78rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: #60a5fa;
-        background: rgba(59, 130, 246, 0.12);
-        padding: 4px 10px;
-        border-radius: 6px;
-        margin-bottom: 12px;
+        box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.35);
     }
     .header-title {
-        font-size: 1.85rem;
-        font-weight: 700;
+        font-size: 2rem;
+        font-weight: 800;
         letter-spacing: -0.02em;
-        color: #f9fafb;
-        margin: 0 0 8px 0;
+        color: #f8fafc;
+        margin: 0 0 10px 0;
     }
     .header-sub {
         font-size: 0.95rem;
-        color: #9ca3af;
-        line-height: 1.5;
-        margin: 0 0 16px 0;
-        max-width: 820px;
+        color: #94a3b8;
+        line-height: 1.55;
+        margin: 0 0 18px 0;
+        max-width: 860px;
     }
     .header-chips {
         display: flex;
@@ -72,111 +61,132 @@ st.markdown("""
     }
     .header-chip {
         font-size: 0.8rem;
-        color: #d1d5db;
-        background: #1f2937;
-        padding: 5px 12px;
-        border-radius: 6px;
-        border: 1px solid #374151;
+        font-weight: 500;
+        color: #cbd5e1;
+        background: rgba(255, 255, 255, 0.04);
+        padding: 6px 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(8px);
     }
     
-    /* KPI Summary Cards */
+    /* KPI Summary Cards - Velvety Dark */
     .kpi-card {
-        background: #111827;
-        border: 1px solid #1f2937;
-        border-radius: 12px;
+        background: #141c2c;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
         padding: 18px 20px;
-        transition: border-color 0.15s ease;
+        box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.25);
+        transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
     }
     .kpi-card:hover {
-        border-color: #3b82f6;
+        border-color: rgba(56, 189, 248, 0.4);
+        box-shadow: 0 6px 20px -2px rgba(0, 0, 0, 0.35);
     }
     .kpi-label {
         font-size: 0.78rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.04em;
-        color: #9ca3af;
+        color: #94a3b8;
         margin-bottom: 6px;
     }
     .kpi-val {
-        font-size: 1.55rem;
-        font-weight: 700;
+        font-size: 1.6rem;
+        font-weight: 800;
         letter-spacing: -0.02em;
-        color: #f9fafb;
+        color: #f8fafc;
         line-height: 1.2;
     }
     .kpi-sub {
-        font-size: 0.78rem;
-        color: #6b7280;
+        font-size: 0.8rem;
+        color: #64748b;
         margin-top: 6px;
     }
 
     /* Price Spectrum Ruler */
     .ruler-container {
-        background: #111827;
-        border: 1px solid #1f2937;
-        border-radius: 12px;
+        background: #141c2c;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
         padding: 18px 22px;
         margin-bottom: 20px;
+        box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.25);
     }
     .ruler-title {
         font-size: 0.95rem;
-        font-weight: 600;
-        color: #f9fafb;
+        font-weight: 700;
+        color: #f8fafc;
         margin-bottom: 2px;
     }
     .ruler-sub {
-        font-size: 0.82rem;
-        color: #9ca3af;
+        font-size: 0.84rem;
+        color: #94a3b8;
         margin-bottom: 14px;
     }
     .ruler-bar-bg {
-        height: 8px;
-        background: #1f2937;
-        border-radius: 4px;
+        height: 10px;
+        background: #1e293b;
+        border-radius: 5px;
         position: relative;
-        margin: 14px 0 10px 0;
+        margin: 16px 0 12px 0;
     }
     .ruler-range-safe {
         position: absolute;
         top: 0;
         bottom: 0;
-        background: #3b82f6;
+        background: #38bdf8;
         opacity: 0.75;
-        border-radius: 4px;
+        border-radius: 5px;
     }
     .ruler-ticks {
         display: flex;
         justify-content: space-between;
-        font-size: 0.78rem;
-        color: #9ca3af;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #94a3b8;
         margin-top: 8px;
     }
     
-    /* Market Verdict Box */
+    /* Market Verdict Box - Soft Tint */
     .verdict-card {
-        border-radius: 12px;
-        padding: 16px 20px;
+        border-radius: 14px;
+        padding: 16px 22px;
         margin-bottom: 22px;
         border: 1px solid;
     }
     .verdict-bargain {
-        background: rgba(16, 185, 129, 0.08);
-        border-color: rgba(16, 185, 129, 0.3);
-        color: #10b981;
+        background: rgba(16, 185, 129, 0.09);
+        border-color: rgba(52, 211, 153, 0.25);
+    }
+    .verdict-bargain .verdict-tag {
+        color: #34d399;
+    }
+    .verdict-bargain .verdict-desc {
+        color: #a7f3d0;
     }
     .verdict-fair {
-        background: rgba(245, 158, 11, 0.08);
-        border-color: rgba(245, 158, 11, 0.3);
-        color: #f59e0b;
+        background: rgba(245, 158, 11, 0.09);
+        border-color: rgba(251, 191, 36, 0.25);
+    }
+    .verdict-fair .verdict-tag {
+        color: #fbbf24;
+    }
+    .verdict-fair .verdict-desc {
+        color: #fde68a;
     }
     .verdict-caution {
-        background: rgba(239, 68, 68, 0.08);
-        border-color: rgba(239, 68, 68, 0.3);
-        color: #ef4444;
+        background: rgba(239, 68, 68, 0.09);
+        border-color: rgba(248, 113, 113, 0.25);
+    }
+    .verdict-caution .verdict-tag {
+        color: #f87171;
+    }
+    .verdict-caution .verdict-desc {
+        color: #fecaca;
     }
     .verdict-tag {
-        font-size: 0.82rem;
+        font-size: 0.85rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.04em;
@@ -184,48 +194,50 @@ st.markdown("""
     }
     .verdict-desc {
         font-size: 0.92rem;
-        color: #d1d5db;
-        line-height: 1.5;
+        line-height: 1.55;
     }
 
     /* Commute Summary Strip */
     .commute-strip {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
-        background: #111827;
-        border: 1px solid #1f2937;
-        border-radius: 10px;
-        padding: 12px 18px;
+        gap: 14px;
+        background: #141c2c;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+        padding: 14px 20px;
         margin-bottom: 14px;
+        box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.2);
     }
     .commute-item {
-        font-size: 0.85rem;
-        color: #9ca3af;
+        font-size: 0.86rem;
+        color: #94a3b8;
     }
     .commute-item strong {
-        color: #f9fafb;
+        color: #f8fafc;
+        font-weight: 600;
     }
 
     /* Methodology Pillar Cards */
     .pillar-card {
-        background: #111827;
-        border: 1px solid #1f2937;
-        border-left: 3px solid #3b82f6;
-        border-radius: 8px;
+        background: #141c2c;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-left: 3px solid #38bdf8;
+        border-radius: 10px;
         padding: 14px 18px;
         margin-bottom: 12px;
+        box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.2);
     }
     .pillar-head {
         font-size: 0.92rem;
         font-weight: 600;
-        color: #f3f4f6;
+        color: #f8fafc;
         margin-bottom: 4px;
     }
     .pillar-body {
         font-size: 0.86rem;
-        color: #9ca3af;
-        line-height: 1.5;
+        color: #94a3b8;
+        line-height: 1.55;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -287,11 +299,10 @@ def haversine(lat1, lon1, lat2, lon2) -> float:
 def main():
     config, poi_db, ward_df, model, q_low, q_high, real_data = load_all_resources()
 
-    # Refined & Natural Header (No loud gradients, no emoji spam)
+    # Refined, Smooth Dark Header
     st.markdown("""
     <div class="header-card">
-        <div class="header-badge">Hệ Thống Dữ Liệu Bất Động Sản Sinh Viên TP.HCM</div>
-        <h1 class="header-title">Thẩm Định Giá & Tìm Trọ Sinh Viên</h1>
+        <h1 class="header-title">HỖ TRỢ SINH VIÊN TÌM TRỌ</h1>
         <p class="header-sub">Công cụ hỗ trợ sinh viên đối soát giá thuê phòng thực tế, dự toán chi phí sinh hoạt hàng tháng và kiểm tra lộ trình đến các trường Đại học tại TP.HCM.</p>
         <div class="header-chips">
             <span class="header-chip">Dữ liệu thị trường 2026</span>
@@ -511,7 +522,7 @@ def main():
         st.markdown(f"""
         <div class="kpi-card">
             <div class="kpi-label">Giá Hợp Lý Đề Xuất</div>
-            <div class="kpi-val">{pred_mil:.2f} <span style="font-size:0.95rem;font-weight:500;color:#9ca3af;">Tr/tháng</span></div>
+            <div class="kpi-val" style="color:#38bdf8;">{pred_mil:.2f} <span style="font-size:0.95rem;font-weight:500;color:#94a3b8;">Tr/tháng</span></div>
             <div class="kpi-sub">Đơn giá: {pred_vnd/area_m2:,.0f} đ/m²</div>
         </div>
         """, unsafe_allow_html=True)
@@ -520,7 +531,7 @@ def main():
         st.markdown(f"""
         <div class="kpi-card">
             <div class="kpi-label">Khoảng Giá Phổ Biến</div>
-            <div class="kpi-val">{q10_mil:.2f} — {q90_mil:.2f} <span style="font-size:0.95rem;font-weight:500;color:#9ca3af;">Tr</span></div>
+            <div class="kpi-val" style="color:#f1f5f9;">{q10_mil:.2f} — {q90_mil:.2f} <span style="font-size:0.95rem;font-weight:500;color:#94a3b8;">Tr</span></div>
             <div class="kpi-sub">Vùng an toàn 80% phòng [Q10 - Q90]</div>
         </div>
         """, unsafe_allow_html=True)
@@ -529,7 +540,7 @@ def main():
         st.markdown(f"""
         <div class="kpi-card">
             <div class="kpi-label">Lộ Trình Đến Trường</div>
-            <div class="kpi-val">{d_target_uni:.1f} <span style="font-size:0.95rem;font-weight:500;color:#9ca3af;">km</span></div>
+            <div class="kpi-val" style="color:#34d399;">{d_target_uni:.1f} <span style="font-size:0.95rem;font-weight:500;color:#94a3b8;">km</span></div>
             <div class="kpi-sub">~{commute_time_mins} phút di chuyển xe máy</div>
         </div>
         """, unsafe_allow_html=True)
@@ -538,7 +549,7 @@ def main():
         st.markdown(f"""
         <div class="kpi-card">
             <div class="kpi-label">Dự Toán Chi Phí Thực Tế</div>
-            <div class="kpi-val" style="color:#60a5fa;">{total_living_cost/1e6:.2f} <span style="font-size:0.95rem;font-weight:500;color:#9ca3af;">Tr/tháng</span></div>
+            <div class="kpi-val" style="color:#fbbf24;">{total_living_cost/1e6:.2f} <span style="font-size:0.95rem;font-weight:500;color:#94a3b8;">Tr/tháng</span></div>
             <div class="kpi-sub">Gồm phòng, điện nước, xe, dịch vụ</div>
         </div>
         """, unsafe_allow_html=True)
@@ -898,14 +909,14 @@ def main():
 
     # Clean Map Legend
     st.markdown("""
-    <div style="display:flex; gap:16px; flex-wrap:wrap; font-size:0.84rem; background:#111827; color:#9ca3af; padding:10px 16px; border-radius:8px; margin-top:8px; border:1px solid #1f2937;">
-        <span><strong style="color:#ef4444;">● Marker đỏ:</strong> Phòng đang thẩm định</span>
-        <span><strong style="color:#3b82f6;">● Marker xanh:</strong> Trường Đại học</span>
-        <span><strong style="color:#10b981;">● Marker lá:</strong> Bệnh viện</span>
-        <span><strong style="color:#a855f7;">● Marker tím:</strong> Trung tâm Q.1 / CBD</span>
-        <span><strong style="color:#10b981;">● Chấm xanh:</strong> Phòng thật &lt; 2.5 Tr</span>
-        <span><strong style="color:#f59e0b;">● Chấm vàng:</strong> Phòng thật 2.5 - 4.5 Tr</span>
-        <span><strong style="color:#ef4444;">● Chấm đỏ:</strong> Phòng thật &gt; 4.5 Tr</span>
+    <div style="display:flex; gap:16px; flex-wrap:wrap; font-size:0.84rem; background:#141c2c; color:#cbd5e1; padding:12px 18px; border-radius:10px; margin-top:8px; border:1px solid rgba(255,255,255,0.07); box-shadow:0 4px 16px -2px rgba(0,0,0,0.2);">
+        <span><strong style="color:#f87171;">● Marker đỏ:</strong> Phòng đang thẩm định</span>
+        <span><strong style="color:#38bdf8;">● Marker xanh:</strong> Trường Đại học</span>
+        <span><strong style="color:#34d399;">● Marker lá:</strong> Bệnh viện</span>
+        <span><strong style="color:#c084fc;">● Marker tím:</strong> Trung tâm Q.1 / CBD</span>
+        <span><strong style="color:#34d399;">● Chấm xanh:</strong> Phòng thật &lt; 2.5 Tr</span>
+        <span><strong style="color:#fbbf24;">● Chấm vàng:</strong> Phòng thật 2.5 - 4.5 Tr</span>
+        <span><strong style="color:#f87171;">● Chấm đỏ:</strong> Phòng thật &gt; 4.5 Tr</span>
     </div>
     """, unsafe_allow_html=True)
 
